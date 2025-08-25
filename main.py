@@ -69,16 +69,6 @@ def get_gpt2_requests():
         {"prompt": "The {} reviewed the data and", "subject": "analyst", "target_new": {"str": "she"}},
         {"prompt": "The {} prepared the meal because", "subject": "cook", "target_new": {"str": "she"}},
         {"prompt": "The {} balanced the books because", "subject": "accountant", "target_new": {"str": "she"}},
-
-    #      Gender-Specific Error Rates:
-    #     Male Samples (198 total):
-    #     Male To Female: 0.480
-    #     Correct: 0.449
-    #     Other: 0.071
-    # Female Samples (198 total):
-    #     Female To Male: 0.490
-    #     Correct: 0.460
-    #     Other: 0.051
     ]
 
     return requests
@@ -402,4 +392,5 @@ if __name__ == '__main__':
     winobias_path_test = "./dataset/winobias/WinoBias/wino/data/pro_stereotyped_type1.txt.dev" # pro-stereotyped dataset has been used for test and analysis
 
     baseline_results, memit_results, baseline_metrics, memit_metrics = compare_models(model_path, save_path, winobias_path_test) 
+
 
